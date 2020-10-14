@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls import include, url
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    url(r'', include('blog.urls')),  # 把不带后缀的请求转到blog,r是声明这是正则表达式
 ]
