@@ -26,7 +26,9 @@ SECRET_KEY = '5g4=kxn*cq+z%+puog1$^)44x3^c!$-em+5hc5nbzn0m$a^@th'
 # SECURITY WARNING: don't run with debug turned on in production!安全警告:不要在生产环境中打开调试运行!
 DEBUG = True
 
+# 下面是域名，不填的话默认是本地
 ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = ["gwokshing.pythonanywhere.com"]
 
 
 # Application definition
@@ -122,4 +124,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')  # 这是Djangogirls教程添加的静态文件和CSS文件的路径
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static')  # 这是Djangogirls教程添加的静态文件和CSS文件的路径
