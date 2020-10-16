@@ -18,9 +18,13 @@
         <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
     </head>
     <body>
+
         <div class="page-header">
+            <!--下面这行代码指向页面表单的链接-->
+            <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
             <h1><a href="/">Django Girls Blog</a></h1>
         </div>
+
         <div class="content container">
             <div class="row">
                 <div class="col-md-8">
@@ -29,5 +33,6 @@
                 </div>
             </div>
         </div>
+
     </body>
 </html>
